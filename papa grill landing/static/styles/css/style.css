@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+.header__button_menu {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+}
+.header__owner_title {
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.17);
+  border-radius: 20px;
+  border-left: 1px solid white;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+.header__logo {
+  width: 154px;
+  height: 133px;
+}
+.header__contact_title {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 0;
+  text-align: end;
+}
+.header__contact {
+  color: #fff;
+  transition: color 0.3s;
+  font-size: 28px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.header__contact:hover {
+  color: #fab520;
+}
+.header__burger {
+  position: fixed;
+  top: 45px;
+  left: 55px;
+  z-index: 10;
+  width: 70px;
+  height: 70px;
+  line-height: 40px;
+  text-align: center;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  background-color: transparent;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.header__burger:active {
+  background: #fab520;
+}
+.header__burger:hover {
+  background: #fab520;
+}
+.header__burger span {
+  display: block;
+  position: relative;
+  width: 12px;
+  height: 2px;
+  background-color: #2f2c30;
+  transition: 0.3s;
+}
+.header__burger span::before {
+  width: 16px;
+  top: -6px;
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  height: 2px;
+  background-color: #2f2c30;
+  transition: 0.3s;
+}
+.header__burger span::after {
+  bottom: -6px;
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: #2f2c30;
+  transition: 0.3s;
+}
+
+.main {
+  height: 100vh;
+  margin-top: -163px;
+}
+.main__franchise {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: url("https://papa-grill.netlify.app/assets/main.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  grid-template-areas: ". left";
+  padding-top: 300px;
+}
+
+.franchise__information {
+  grid-area: left;
+  width: auto;
+  height: auto;
+}
+.franchise__information_leftside {
+  max-width: 680px;
+  height: 320px;
+}
+.franchise__pretitle {
+  text-transform: uppercase;
+  font-size: 16px;
+  background-image: url("https://papa-grill.netlify.app/assets/main-pretitle-bg.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  line-height: 1.4;
+  background-size: contain;
+  padding: 10px 40px;
+  letter-spacing: 0.7em;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 15px;
+}/*# sourceMappingURL=style.css.map */
