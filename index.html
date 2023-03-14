@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="/static/styles/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300;400&family=Qwitcher+Grypen&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300;400&family=Qwitcher+Grypen&family=Rubik&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header class="header">
         <div class="header__owner_title">
-            Франшиза сети <br/> "Papa Grill"
+            Франшиза сети <br /> "Papa Grill"
         </div>
         <div>
             <img src="/static/images/logo.svg" class="header__logo" alt="logo">
@@ -33,15 +44,55 @@
     <main class="main">
         <section class="main__franchise">
             <div class="franchise__information">
-                <div class="franchise__information_leftside">
+                <article class="franchise__information_leftside">
                     <p class="franchise__pretitle">
                         Франшиза
                     </p>
+                    <h1 class="franchise__title">
+                        открой <span class="franchise__selected">свой</span> papa grill
+                    </h1>
+                    <p class="franchise__subtitle">
+                        За 4 недели, и <span class="franchise__subtitle__selected">зарабатывай от 100 000
+                            Грн./месяц</span> Соблюдая стандарты компании
+                    </p>
+                    <button class="franchise__button">Оставить заявку</button>
+                </article>
+            </div>
+        </section>
+        <section class="main__about">
+            <div class="about__information">
+                <h2 class="about__title">наша <br /> история</h2>
+                <article class="about__article">
+                    <p>«Papa Grill» это одна из крупнейший сети уличной еды. Основное меню это хот-доги и бургеры. </p>
+                    <p>Мы продумали все, до каждой мелочи, с душой. Не стоим на месте, и развиваемся, внимательно
+                        относимся к деталям и именно такой подход к делу привел к результатам. </p>
+                    <p>Команда Papa Grill – это семья, частью которой может стать каждый. Да, имено каждый. Мы развиваем
+                        франчайзинговую сеть, и ищем партнеров. </p>
+                    <p>Более 40 открытых торговых точки в РФ, Украине и Казахстане. Присоединяйся к нашей большой и
+                        дружной семье! </p>
+                </article>
+
+                <div class="about__social">
+                    <div class="about__link">
+                        <a href="#">
+                            <img src="./static/images/play.png" alt="">
+                        </a>
+                    </div>
+                    <div class="about__youtube">
+                        <h3 class="about__youtube_title">
+                            канал <span>you</span>tube
+                        </h3>
+                        <p class="about__youtube_subtitle">
+                            Смотрите наш канал
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
+        <section class="main__statistic"></section>
     </main>
 
     <script src="static/js/script.js"></script>
 </body>
+
 </html>

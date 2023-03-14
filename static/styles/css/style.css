@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat.ttf");
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -12,7 +15,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  max-width: 1240px;
   margin: 0 auto;
   padding: 15px 0;
 }
@@ -117,18 +119,37 @@
   width: 100%;
   height: 100%;
   background-size: cover;
-  grid-template-areas: ". left";
+  grid-template-areas: ". right";
   padding-top: 300px;
+  background-position: center top;
+  min-height: 1040px;
+}
+.main__about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: url("https://papa-grill.netlify.app/assets/about.jpg");
+  height: 100%;
+  background-size: cover;
+  grid-template-areas: "left .";
+  padding: 100px 0;
+  min-height: 1040px;
+  background-position: center top;
+}
+.main__statistic {
+  height: 100%;
+  padding: 100px 0;
+  background: url("https://papa-grill.netlify.app/assets/statistic.jpg");
+  background-size: contain;
+  background-position: center top;
 }
 
 .franchise__information {
-  grid-area: left;
+  grid-area: right;
   width: auto;
   height: auto;
 }
 .franchise__information_leftside {
   max-width: 680px;
-  height: 320px;
 }
 .franchise__pretitle {
   text-transform: uppercase;
@@ -143,4 +164,141 @@
   color: #fff;
   font-weight: 600;
   margin-bottom: 15px;
+}
+.franchise__title {
+  text-transform: uppercase;
+  font-size: 80px;
+  font-weight: bolder;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin-bottom: 35px;
+}
+.franchise__selected {
+  color: #fab520;
+}
+.franchise__subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  margin-bottom: 60px;
+}
+.franchise__subtitle__selected {
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+.franchise__button {
+  padding: 20px 50px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+  border: none;
+  outline: none;
+  letter-spacing: 2px;
+  color: #6c5d24;
+  background: linear-gradient(to top, #e1af00 0%, #f5d70e 100%);
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.about__information {
+  grid-area: left;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.about__title {
+  font-size: 80px;
+  text-transform: uppercase;
+  padding: 60px 0;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+.about__social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about__youtube {
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+}
+.about__youtube_title {
+  font-size: 16px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+}
+.about__youtube_title span {
+  color: red;
+}
+.about__youtube_subtitle {
+  font-size: 14px;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-weight: 100;
+}
+.about__link {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: rgb(250, 181, 32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: triplePulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.about__link img {
+  width: 25px;
+  height: 25px;
+}
+.about__article {
+  margin-bottom: 40px;
+}
+.about__article p {
+  color: rgb(51, 51, 51);
+  letter-spacing: 0.64px;
+  line-height: 24px;
+  margin: 0 0 20px 0;
+  font-size: 16px;
+}
+.about__article p:last-child {
+  margin: 0;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0px 0px 0px 5px #f5d70e;
+  }
+  100% {
+    box-shadow: 0px 0px 0px 20px rgba(245, 215, 14, 0);
+  }
+}
+@keyframes triplePulse {
+  0% {
+    box-shadow: 0px 0px 0px -60px rgba(110, 110, 110, 0.1), 0px 0px 0px -30px rgba(110, 110, 110, 0.1), 0px 0px 0px 0px rgba(110, 110, 110, 0.1);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 30px rgba(110, 110, 110, 0.05), 0px 0px 0px 60px rgba(110, 110, 110, 0.05), 0px 0px 0px 90px rgba(110, 110, 110, 0.05);
+  }
+  100% {
+    box-shadow: 0px 0px 0px -60px rgba(110, 110, 110, 0.1), 0px 0px 0px -30px rgba(110, 110, 110, 0.1), 0px 0px 0px 0px rgba(110, 110, 110, 0.1);
+  }
 }/*# sourceMappingURL=style.css.map */
