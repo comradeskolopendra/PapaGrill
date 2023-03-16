@@ -113,39 +113,38 @@
   margin-top: -163px;
 }
 .main__franchise {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   background: url("https://papa-grill.netlify.app/assets/main.jpg");
   width: 100%;
   height: 100%;
   background-size: cover;
-  grid-template-areas: ". right";
   padding-top: 300px;
   background-position: center top;
   min-height: 1040px;
 }
 .main__about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   background: url("https://papa-grill.netlify.app/assets/about.jpg");
   height: 100%;
   background-size: cover;
-  grid-template-areas: "left .";
   padding: 100px 0;
   min-height: 1040px;
   background-position: center top;
 }
 .main__statistic {
+  display: flex;
   height: 100%;
-  padding: 100px 0;
+  padding: 60px 15px;
   background: url("https://papa-grill.netlify.app/assets/statistic.jpg");
   background-size: contain;
   background-position: center top;
 }
 
 .franchise__information {
-  grid-area: right;
-  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  width: 1180px;
+  margin: 0 auto;
   height: auto;
 }
 .franchise__information_leftside {
@@ -211,8 +210,13 @@
 }
 
 .about__information {
-  grid-area: left;
   max-width: 520px;
+}
+.about__information_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 1180px;
   margin: 0 auto;
 }
 .about__title {
@@ -283,6 +287,106 @@
   margin: 0;
 }
 
+.statistic__information {
+  display: flex;
+  flex-direction: column;
+  width: 1180px;
+  margin: 0 auto;
+}
+.statistic__block_pretitle {
+  display: flex;
+  justify-content: flex-start;
+}
+.statistic__pretitle {
+  color: #eee;
+  letter-spacing: 2px;
+  font-size: 60px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.statistic__pretitle span {
+  color: #fab520;
+}
+.statistic__block_numbers {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 40px auto;
+}
+.statistic__numbers {
+  font-size: 122px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.statistic__food {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #fff;
+  text-align: start;
+}
+.statistic__food span {
+  color: #fab520;
+}
+.statistic__burger_container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.statistic__menu_wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+.statistic__menu {
+  padding: 5px;
+  background-color: #2f2c30;
+  display: flex;
+  align-items: center;
+  width: 210px;
+  justify-content: space-between;
+  border-radius: 35px;
+}
+.statistic__menu_paragraph {
+  font-size: 12px;
+  max-width: 110px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  color: #fff;
+  margin-bottom: 0;
+}
+.statistic__menu_paragraph span {
+  color: rgba(255, 255, 255, 0.4);
+}
+.statistic__download {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  background-color: #3b383c;
+}
+.statistic__download img {
+  width: 35px;
+  height: 35px;
+}
+
+.image__burger {
+  position: absolute;
+  bottom: -220px;
+  left: 120px;
+}
+
 @keyframes pulse {
   0% {
     box-shadow: 0px 0px 0px 5px #f5d70e;
@@ -293,12 +397,12 @@
 }
 @keyframes triplePulse {
   0% {
-    box-shadow: 0px 0px 0px -60px rgba(110, 110, 110, 0.1), 0px 0px 0px -30px rgba(110, 110, 110, 0.1), 0px 0px 0px 0px rgba(110, 110, 110, 0.1);
+    box-shadow: 0px 0px 0px -60px rgba(110, 110, 110, 0.17), 0px 0px 0px -30px rgba(110, 110, 110, 0.17), 0px 0px 0px 0px rgba(110, 110, 110, 0.17);
   }
   50% {
-    box-shadow: 0px 0px 0px 30px rgba(110, 110, 110, 0.05), 0px 0px 0px 60px rgba(110, 110, 110, 0.05), 0px 0px 0px 90px rgba(110, 110, 110, 0.05);
+    box-shadow: 0px 0px 0px 30px rgba(110, 110, 110, 0.17), 0px 0px 0px 60px rgba(110, 110, 110, 0.17), 0px 0px 0px 90px rgba(110, 110, 110, 0.17);
   }
   100% {
-    box-shadow: 0px 0px 0px -60px rgba(110, 110, 110, 0.1), 0px 0px 0px -30px rgba(110, 110, 110, 0.1), 0px 0px 0px 0px rgba(110, 110, 110, 0.1);
+    box-shadow: 0px 0px 0px -60px rgba(110, 110, 110, 0.17), 0px 0px 0px -30px rgba(110, 110, 110, 0.17), 0px 0px 0px 0px rgba(110, 110, 110, 0.17);
   }
 }/*# sourceMappingURL=style.css.map */
