@@ -118,6 +118,7 @@
   width: 100%;
   height: 100%;
   background-size: cover;
+  padding: 0 15px;
   padding-top: 300px;
   background-position: center top;
   min-height: 1040px;
@@ -127,17 +128,31 @@
   background: url("https://papa-grill.netlify.app/assets/about.jpg");
   height: 100%;
   background-size: cover;
-  padding: 100px 0;
+  padding: 100px 15px;
   min-height: 1040px;
   background-position: center top;
 }
 .main__statistic {
   display: flex;
-  height: 100%;
-  padding: 60px 15px;
+  padding: 100px 15px;
   background: url("https://papa-grill.netlify.app/assets/statistic.jpg");
-  background-size: contain;
   background-position: center top;
+  background-repeat: no-repeat;
+}
+.main__arguments {
+  width: 100%;
+  background-image: url("https://papa-grill.netlify.app/assets/reasons.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 850px;
+  padding: 100px 15px;
+}
+.main__rules {
+  background-image: url("https://papa-grill.netlify.app/assets/rules.jpg");
+  background-size: cover;
+  padding: 100px 15px;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 .franchise__information {
@@ -352,6 +367,8 @@
   width: 210px;
   justify-content: space-between;
   border-radius: 35px;
+  cursor: pointer;
+  text-decoration: none;
 }
 .statistic__menu_paragraph {
   font-size: 12px;
@@ -379,6 +396,126 @@
 .statistic__download img {
   width: 35px;
   height: 35px;
+}
+
+.arguments {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.arguments__title {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 72px;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+}
+.arguments__title span {
+  color: #fab520;
+}
+.arguments__text {
+  max-width: 50%;
+  width: calc(50% - 10px);
+}
+.arguments__paragraph {
+  font-size: 20px;
+  line-height: 1.5;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+.arguments__item {
+  min-height: 260px;
+  padding: 40px 20px;
+  border: 10px solid #252525;
+  width: calc(25% - 30px);
+  position: relative;
+  border-radius: 10px;
+  background: #3b383c;
+  margin-bottom: 20px;
+}
+.arguments__item_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+.arguments__item_title span {
+  color: #fab520;
+}
+.arguments__item_count {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: rgba(255, 255, 255, 0.17);
+  font-weight: 700;
+}
+.arguments__item_paragraph {
+  color: white;
+}
+
+.rules__content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.rules__title {
+  font-size: 72px;
+  font-weight: 700;
+  color: #333;
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.rules__title span {
+  color: #fab520;
+}
+.rules__paragraph {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+  line-height: 2;
+  max-width: 580px;
+}
+.rules__paragraph:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  background: #3b383c;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 35px;
+}
+footer h3 {
+  margin: 0;
+}
+
+.menubar {
+  width: 0;
+  height: 100vh;
+  background: #3b383c;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+.menubar a {
+  text-decoration: none;
+  color: white;
+  margin: 15px 0;
+}
+.menubar__active {
+  display: flex;
+  flex-direction: column;
+  padding: 180px 55px 0px 55px;
+  width: 400px;
 }
 
 .image__burger {

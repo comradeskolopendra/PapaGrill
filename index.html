@@ -8,7 +8,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="/static/styles/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,8 +43,16 @@
         </button>
     </header>
 
+    <section class="menubar" style="display: none;">
+        <a href="#franchise">Главная</a>
+        <a href="#about">О нас</a>
+        <a href="#statistic">Статистика</a>
+        <a href="#arguments">Почему мы?</a>
+        <a href="#rules">Принципы</a>
+    </section>
+
     <main class="main">
-        <section class="main__franchise">
+        <section id="franchise" class="main__franchise">
             <div class="franchise__information">
                 <article class="franchise__information_leftside">
                     <p class="franchise__pretitle">
@@ -59,7 +69,7 @@
                 </article>
             </div>
         </section>
-        <section class="main__about">
+        <section id="about" class="main__about">
             <div class="about__information_wrapper">
                 <div class="about__information">
                     <h2 class="about__title">наша <br /> история</h2>
@@ -93,7 +103,7 @@
                 </div>
             </div>
         </section>
-        <section class="main__statistic">
+        <section id="statistic" class="main__statistic">
             <div class="statistic__information">
                 <div class="statistic__block_pretitle">
                     <h2 class="statistic__pretitle">
@@ -116,18 +126,78 @@
                     </div>
                 </div>
                 <div class="statistic__menu_wrapper">
-                    <div class="statistic__menu">
-                        <button class="statistic__download">
+                    <a class="statistic__menu" href="./static/fonts/Montserrat.ttf" download target="_blank">
+                        <div class="statistic__download">
                             <img src="./static/images/download.png" alt="">
-                        </button>
+                        </div>
                         <p class="statistic__menu_paragraph">
-                            Смотреть<br/> полное меню
+                            Смотреть<br /> полное меню
                             <span>PDF, 10MB</span>
                         </p>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
+        <section id="arguments" class="main__arguments">
+            <div class="arguments">
+                <div class="arguments__text">
+                    <h2 class="arguments__title">
+                        ПОЧЕМУ <br />
+                        <span>PAPA GRILL</span>
+                    </h2>
+                    <p class="arguments__paragraph">
+                        Аргументы и причины, по которым работа с нами<br /> приносит прибыль
+                    </p>
+                </div>
+                <div class="arguments__item">
+                    <h3 class="arguments__item_title"><span>4 ГОДА</span> УСПЕШНОЙ РАБОТЫ </h3>
+                    <p class="arguments__item_paragraph">На рынке франшиз</p>
+                    <p class="arguments__item_count">01</p>
+                </div>
+                <div class="arguments__item">
+                    <h3 class="arguments__item_title"><span>ОПЫТНАЯ</span> КОМАНДА </h3>
+                    <p class="arguments__item_paragraph">г.Москва</p>
+                    <p class="arguments__item_count">02</p>
+                </div>
+                <div class="arguments__item">
+                    <h3 class="arguments__item_title">БОЛЕЕ <br /><span>40 ОТКРЫТЫХ</span> ТОРГОВЫХ ТОЧКИ </h3>
+                    <p class="arguments__item_paragraph">В трёх странах</p>
+                    <p class="arguments__item_count">03</p>
+                </div>
+                <div class="arguments__item">
+                    <h3 class="arguments__item_title"><span>ПОМОЩЬ</span> В ВЫБОРЕ ПОМЕЩЕНИЯ</h3>
+                    <p class="arguments__item_paragraph">Аудит локации</p>
+                    <p class="arguments__item_count">04</p>
+                </div>
+                <div class="arguments__item">
+                    <h3 class="arguments__item_title"><span>ОТКРЫТИЕ</span> ТОРГОВОЙ <br />ТОЧКИ ДО 4 НЕДЕЛЬ </h3>
+                    <p class="arguments__item_paragraph">По статистике </p>
+                    <p class="arguments__item_count">05</p>
+                </div>
+                <div class="arguments__item">
+                    <h3 class="arguments__item_title">ОКУПАЕМОСТЬ <span>ОТ 8 МЕСЯЦЕВ</span></h3>
+                    <p class="arguments__item_paragraph">Соблюдая стандарты</p>
+                    <p class="arguments__item_count">06</p>
+                </div>
+            </div>
+        </section>
+        <section id="rules" class="main__rules">
+            <div class="rules__content">
+                <div class="rules__text">
+                    <h2 class="rules__title">для нас <span>важно</span></h2>
+                    <p class="rules__paragraph">В нашей работе мы придерживаемся 4-х главных принципов: комфортная
+                        атмосфера, только качественные продукты и забота о каждом из вас. Ничего лишнего. </p>
+                    <p class="rules__paragraph">Уважение к друг другу и одержимость своей работой – основа успеха Papa
+                        Grill! </p>
+                </div>
+                <div class="rules__img">
+                    <img src="./static/images/rules-burger.png" alt="">
+                </div>
+            </div>
+        </section>
+        <footer>
+            <h3>© Skolopendrovskie Dela 2023</h2>
+        </footer>
     </main>
 
     <script src="static/js/script.js"></script>
