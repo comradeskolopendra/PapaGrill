@@ -77,7 +77,7 @@
 .header__burger:hover {
   background: #fab520;
 }
-.header__burger span {
+.header__burger_item {
   display: block;
   position: relative;
   width: 12px;
@@ -85,7 +85,7 @@
   background-color: #2f2c30;
   transition: 0.3s;
 }
-.header__burger span::before {
+.header__burger_item::before {
   width: 16px;
   top: -6px;
   content: "";
@@ -96,7 +96,7 @@
   background-color: #2f2c30;
   transition: 0.3s;
 }
-.header__burger span::after {
+.header__burger_item::after {
   bottom: -6px;
   content: "";
   position: absolute;
@@ -106,6 +106,9 @@
   height: 2px;
   background-color: #2f2c30;
   transition: 0.3s;
+}
+.header__burger_item__active {
+  transform: rotateZ(-45deg);
 }
 
 .main {
@@ -418,7 +421,7 @@
 }
 .arguments__text {
   max-width: 50%;
-  width: calc(50% - 10px);
+  width: calc(50% - 20px);
 }
 .arguments__paragraph {
   font-size: 20px;
@@ -541,5 +544,13 @@ footer h3 {
   }
   100% {
     box-shadow: 0px 0px 0px -60px rgba(110, 110, 110, 0.17), 0px 0px 0px -30px rgba(110, 110, 110, 0.17), 0px 0px 0px 0px rgba(110, 110, 110, 0.17);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .image__burger {
+    display: none;
+  }
+  .rules__img {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

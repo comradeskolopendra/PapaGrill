@@ -87,7 +87,7 @@
             background: #fab520;
         }
 
-        span {
+        &_item {
             display: block;
             position: relative;
             width: 12px;
@@ -117,6 +117,10 @@
                 height: 2px;
                 background-color: #2f2c30;
                 transition: 0.3s;
+            }
+
+            &__active {
+                transform: rotateZ(-45deg);
             }
         }
     }
@@ -479,7 +483,7 @@
 
     &__text {
         max-width: 50%;
-        width: calc(50% - 10px);
+        width: calc(50% - 20px);
     }
 
     &__paragraph {
@@ -630,5 +634,17 @@ footer {
         box-shadow: 0px 0px 0px -60px rgba(110, 110, 110, .17), 
                     0px 0px 0px -30px rgba(110, 110, 110, .17), 
                     0px 0px 0px 0px rgba(110, 110, 110, .17); 
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .image {
+        &__burger {
+            display: none;
+        }
+    }
+
+    .rules__img {
+        display: none;
     }
 }
