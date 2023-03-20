@@ -12,6 +12,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 .header {
     background-color: transparent;
     display: flex;
@@ -158,6 +163,7 @@
         background: url("https://papa-grill.netlify.app/assets/statistic.jpg");
         background-position: center top;
         background-repeat: no-repeat;
+        background-color: #232323;
     }
 
     &__arguments {
@@ -167,6 +173,7 @@
         background-repeat: no-repeat;
         min-height: 850px;
         padding: 100px 15px;
+        background-color: #232323;
     }
 
     &__rules {
@@ -465,8 +472,10 @@
     max-width: 1180px;
     margin: 0 auto;
     display: flex;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
 
     &__title {
         color: #fff;
@@ -645,6 +654,119 @@ footer {
     }
 
     .rules__img {
+        display: block;
+    }
+
+    .main {
+        &__about {
+            background-position: unset;
+        }
+    }
+
+    .header {
+        &__owner_title {
+            display: none;
+        }
+
+        &__burger {
+            display: none;
+        }
+    }
+
+    .franchise {
+
+    }
+
+    .arguments {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 15px;
+        width: 100%;
+
+        &__item {
+            width: calc(33% - 20px);
+            min-width: 265px;
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__text {
+            width: 100%;
+            max-width: unset;
+            text-align: center;
+        }
+    }
+
+    .about {
+        &__information {
+
+            &_wrapper {
+                padding: 0 15px;
+            }
+        }
+    }
+
+    .statistic {
+        &__numbers {
+            font-size: 72px;
+        }
+
+        &__pretitle {
+            font-size: 44px;
+        }
+
+        &__food {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 865px) {
+    .rules__img {
         display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .franchise {
+        &__title {
+            font-size: 44px;
+        }
+    }
+
+    .header {
+        &__contact {
+            font-size: 22px;
+        }
+
+        &__logo {
+            width: 100px;
+        }
+    }
+
+    .about {
+        &__title {
+            font-size: 44px;
+        }
+    }
+
+    .statistic {
+
+        &__pretitle {
+            font-size: 18px;
+        }
+
+        &__numbers {
+            font-size: 44px;
+        }
+    }
+
+    .rules {
+
+        &__title {
+            font-size: 44px;
+        }
     }
 }

@@ -10,6 +10,11 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 .header {
   background-color: transparent;
   display: flex;
@@ -141,6 +146,7 @@
   background: url("https://papa-grill.netlify.app/assets/statistic.jpg");
   background-position: center top;
   background-repeat: no-repeat;
+  background-color: #232323;
 }
 .main__arguments {
   width: 100%;
@@ -149,6 +155,7 @@
   background-repeat: no-repeat;
   min-height: 850px;
   padding: 100px 15px;
+  background-color: #232323;
 }
 .main__rules {
   background-image: url("https://papa-grill.netlify.app/assets/rules.jpg");
@@ -405,8 +412,10 @@
   max-width: 1180px;
   margin: 0 auto;
   display: flex;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .arguments__title {
   color: #fff;
@@ -551,6 +560,73 @@ footer h3 {
     display: none;
   }
   .rules__img {
+    display: block;
+  }
+  .main__about {
+    background-position: unset;
+  }
+  .header__owner_title {
     display: none;
+  }
+  .header__burger {
+    display: none;
+  }
+  .arguments {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .arguments__item {
+    width: calc(33% - 20px);
+    min-width: 265px;
+  }
+  .arguments__title {
+    font-size: 32px;
+  }
+  .arguments__text {
+    width: 100%;
+    max-width: unset;
+    text-align: center;
+  }
+  .about__information_wrapper {
+    padding: 0 15px;
+  }
+  .statistic__numbers {
+    font-size: 72px;
+  }
+  .statistic__pretitle {
+    font-size: 44px;
+  }
+  .statistic__food {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 865px) {
+  .rules__img {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .franchise__title {
+    font-size: 44px;
+  }
+  .header__contact {
+    font-size: 22px;
+  }
+  .header__logo {
+    width: 100px;
+  }
+  .about__title {
+    font-size: 44px;
+  }
+  .statistic__pretitle {
+    font-size: 18px;
+  }
+  .statistic__numbers {
+    font-size: 44px;
+  }
+  .rules__title {
+    font-size: 44px;
   }
 }/*# sourceMappingURL=style.css.map */
