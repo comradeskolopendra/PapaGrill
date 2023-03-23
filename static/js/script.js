@@ -35,7 +35,9 @@ function createModal() {
                     <input/ class="form__input">
                     <span class="form__span">Почта</span>
                 </div>
-                <button class="" type="submit"></button>
+                <div class="form__item">
+                    <button type="submit" class="form__submit">Подвердить</button>
+                </div>
             </form>
         </div>
     `;
