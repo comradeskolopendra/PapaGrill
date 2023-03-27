@@ -82,3 +82,7 @@ function disableScroll() {
 function enableScroll() {
     $("body").removeClass("modal__opened")
 }
+
+$("#scrollTop").on("click", () => {
+   window.scrollTo({top: 0, behavior: "smooth"});
+})

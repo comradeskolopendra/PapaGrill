@@ -693,6 +693,10 @@ body {
             margin-bottom: 0;
         }
     }
+
+    &__scrollTop {
+        display: none;
+    }
 }
 
 footer {
@@ -778,6 +782,27 @@ footer {
         }
     }
 
+    .rules {
+        &__scrollTop {
+            display: flex;
+            margin-left: auto;
+            padding: 10px 15px;
+            margin-top: 15px;
+            border: none;
+            background: #3b383c;
+            color: #e1af00;
+            border-radius: 5px;
+        }
+    }
+
+    .franchise {
+
+        &__button {
+            display: flex;
+            margin: 0 auto;
+        }
+    }
+
     .rules__img {
         display: block;
     }
@@ -796,10 +821,6 @@ footer {
         &__burger {
             display: none;
         }
-    }
-
-    .franchise {
-
     }
 
     .arguments {

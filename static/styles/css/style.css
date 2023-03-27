@@ -604,6 +604,9 @@ body {
 .rules__paragraph:last-child {
   margin-bottom: 0;
 }
+.rules__scrollTop {
+  display: none;
+}
 
 footer {
   background: #3b383c;
@@ -667,6 +670,20 @@ footer h3 {
 @media screen and (max-width: 1024px) {
   .image__burger {
     display: none;
+  }
+  .rules__scrollTop {
+    display: flex;
+    margin-left: auto;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border: none;
+    background: #3b383c;
+    color: #e1af00;
+    border-radius: 5px;
+  }
+  .franchise__button {
+    display: flex;
+    margin: 0 auto;
   }
   .rules__img {
     display: block;
