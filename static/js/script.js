@@ -36,21 +36,49 @@ function createModal() {
                     <span class="form__span">Почта</span>
                 </div>
                 <div class="form__item">
-                    <button type="submit" class="form__submit">Подвердить</button>
+                    <button type="submit" class="form__submit" id="sendForm">Подвердить</button>
                 </div>
             </form>
         </div>
     `;
 
     $(".modal__bg").append(str).fadeIn(500);
-    $(".modal__close").on("click", () => {
+    $(".modal__close").on("click", closeModal);
+    $("#requestForm").on("submit", (event) => {
+        closeModal(event);
+        let randomError = Math.round(Math.random() * 10) < 5;
+        createNotifyBlock(randomError);
+    })
+
+    function closeModal(event) {
+        event.preventDefault();
         $(".modal__bg").fadeOut(500, () => {
             $(".modal__bg").remove();
-            $("body").removeClass("modal__opened")
+            enableScroll();
         });
-    });
+    }
+}
+
+function createNotifyBlock(error) {
+    const notify = 
+        `<div class="notify" style="${error ? 'background-color: red;' : 'background-color: green;'} display: none;">
+            <h2 class="notify__title">
+                ${error ? "Ошибка!" : "Успешно!"}
+            </h2>
+        </div>`
+    $("body").append(notify)
+    $(".notify").fadeIn(500);
+    setTimeout(() => {
+        $(".notify").fadeOut(500, () => {
+            $(".notify").remove();
+        })
+    }, 5000)
 }
 
 function disableScroll() {
     $("body").addClass("modal__opened")
+}
+
+function enableScroll() {
+    $("body").removeClass("modal__opened")
 }

@@ -65,6 +65,25 @@ body {
     }
 }
 
+.notify {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 360px;
+    height: 150px;
+    border-radius: 15px;
+    displaY: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        color: black;
+        font-size: 24px;
+        margin: 0;
+        text-align: center;
+    }
+}
+
 .modal {
 
     &__opened {
