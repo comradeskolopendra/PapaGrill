@@ -747,6 +747,12 @@ footer h3 {
     width: 25px;
     height: 25px;
   }
+  .form__input {
+    width: 100%;
+  }
+  .form__span {
+    left: 15px;
+  }
   .franchise__title {
     font-size: 44px;
   }

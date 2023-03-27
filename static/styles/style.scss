@@ -895,6 +895,16 @@ footer {
         }
     }
 
+    .form {
+        &__input {
+            width: 100%;
+        }
+
+        &__span {
+            left: 15px;
+        }
+    }
+
     .franchise {
         &__title {
             font-size: 44px;
