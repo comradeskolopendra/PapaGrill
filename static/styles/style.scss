@@ -774,10 +774,14 @@ footer {
     }
 }
 
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 1360px) {
     .header {
 
         &__owner_title {
+            display: none;
+        }
+
+        &__burger {
             display: none;
         }
     }
@@ -823,13 +827,6 @@ footer {
     .main {
         &__about {
             background-position: unset;
-        }
-    }
-
-    .header {
-
-        &__burger {
-            display: none;
         }
     }
 

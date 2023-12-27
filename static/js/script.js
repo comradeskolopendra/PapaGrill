@@ -1,4 +1,4 @@
-$(".header__burger").on("click", function() {
+$(".header__burger").on("click", function () {
     $(".menubar").addClass("menubar__active")
     $(".menubar").toggle("slide")
     $(".header__burger .header__burger_item").toggleClass("header__burger_item__active")
@@ -60,7 +60,7 @@ function createModal() {
 }
 
 function createNotifyBlock(error) {
-    const notify = 
+    const notify =
         `<div class="notify" style="${error ? 'background-color: red;' : 'background-color: green;'} display: none;">
             <h2 class="notify__title">
                 ${error ? "Ошибка!" : "Успешно!"}
@@ -83,6 +83,11 @@ function enableScroll() {
     $("body").removeClass("modal__opened")
 }
 
+const handlerOnScroll = (event) => {
+    const { target } = event;
+    console.log(target)
+}
+
 $("#scrollTop").on("click", () => {
-   window.scrollTo({top: 0, behavior: "smooth"});
+    window.scrollTo({ top: 0, behavior: "smooth" });
 })
