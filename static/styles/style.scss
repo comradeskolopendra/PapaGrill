@@ -5,6 +5,10 @@
     src: url("../fonts/Montserrat.ttf");
 }
 
+#scrollTop.none {
+    display: none;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -15,6 +19,7 @@
 body {
     overflow-x: hidden;
     scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 .form {
@@ -256,7 +261,6 @@ body {
 }
 
 .main {
-    height: 100vh;
     margin-top: -163px;
 
     &__franchise {
@@ -774,7 +778,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1480px) {
     .header {
 
         &__owner_title {

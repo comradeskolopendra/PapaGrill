@@ -83,11 +83,22 @@ function enableScroll() {
     $("body").removeClass("modal__opened")
 }
 
-const handlerOnScroll = (event) => {
-    const { target } = event;
-    console.log(target)
+const handleScroll = () => {
+    const toTop = document.querySelector(".main").getBoundingClientRect().top;
+    const btnToTop = document.querySelector("#scrollTop");
+
+    if (toTop < 0) {
+        console.log(true);
+        btnToTop.classList.remove("none")
+    } else {
+        console.log(false)
+        btnToTop.classList.add("none")
+    }
 }
 
-$("#scrollTop").on("click", () => {
+const handleClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-})
+}
+
+window.addEventListener("scroll", handleScroll)
+document.querySelector("#scrollTop").addEventListener("click", handleClick)
