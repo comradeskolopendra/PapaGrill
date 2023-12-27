@@ -774,6 +774,15 @@ footer {
     }
 }
 
+@media screen and (max-width: 1240px) {
+    .header {
+
+        &__owner_title {
+            display: none;
+        }
+    }
+}
+
 @media screen and (max-width: 1024px) {
 
     .image {
@@ -818,9 +827,6 @@ footer {
     }
 
     .header {
-        &__owner_title {
-            display: none;
-        }
 
         &__burger {
             display: none;

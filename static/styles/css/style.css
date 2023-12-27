@@ -667,6 +667,11 @@ footer h3 {
     box-shadow: 0px 0px 0px -60px rgba(110, 110, 110, 0.17), 0px 0px 0px -30px rgba(110, 110, 110, 0.17), 0px 0px 0px 0px rgba(110, 110, 110, 0.17);
   }
 }
+@media screen and (max-width: 1240px) {
+  .header__owner_title {
+    display: none;
+  }
+}
 @media screen and (max-width: 1024px) {
   .image__burger {
     display: none;
@@ -693,9 +698,6 @@ footer h3 {
   }
   .main__about {
     background-position: unset;
-  }
-  .header__owner_title {
-    display: none;
   }
   .header__burger {
     display: none;
