@@ -5,6 +5,10 @@
     src: url("../fonts/Montserrat.ttf");
 }
 
+#scrollTop.none {
+    display: none;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -15,6 +19,7 @@
 body {
     overflow-x: hidden;
     scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 .form {
@@ -48,7 +53,7 @@ body {
 
     &__span {
         color: #f5d70e;
-        position:absolute;
+        position: absolute;
         left: 55px;
         font-size: 13px;
         top: -10px;
@@ -91,13 +96,13 @@ body {
     }
 
     &__bg {
-        background: rgba(0,0,0,0.4);
+        background: rgba(0, 0, 0, 0.4);
         width: 100vw;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        position:fixed;
+        position: fixed;
         top: 0;
         z-index: 11;
     }
@@ -256,7 +261,6 @@ body {
 }
 
 .main {
-    height: 100vh;
     margin-top: -163px;
 
     &__franchise {
@@ -500,7 +504,7 @@ body {
         color: #eee;
         letter-spacing: 2px;
         font-size: 60px;
-        font-weight: 600; 
+        font-weight: 600;
         text-transform: uppercase;
 
         span {
@@ -568,7 +572,7 @@ body {
             cursor: pointer;
             color: #fff;
             margin-bottom: 0;
-            
+
             span {
                 color: rgba(255, 255, 255, 0.4);
             }
@@ -756,21 +760,34 @@ footer {
 
 @keyframes triplePulse {
     0% {
-        box-shadow: 0px 0px 0px -60px rgba(110, 110, 110, .17), 
-                    0px 0px 0px -30px rgba(110, 110, 110, .17), 
-                    0px 0px 0px 0px rgba(110, 110, 110, .17);
+        box-shadow: 0px 0px 0px -60px rgba(110, 110, 110, .17),
+            0px 0px 0px -30px rgba(110, 110, 110, .17),
+            0px 0px 0px 0px rgba(110, 110, 110, .17);
     }
 
     50% {
-        box-shadow: 0px 0px 0px 30px rgba(110, 110, 110, .17), 
-                    0px 0px 0px 60px rgba(110, 110, 110, .17), 
-                    0px 0px 0px 90px rgba(110, 110, 110, .17);
+        box-shadow: 0px 0px 0px 30px rgba(110, 110, 110, .17),
+            0px 0px 0px 60px rgba(110, 110, 110, .17),
+            0px 0px 0px 90px rgba(110, 110, 110, .17);
     }
 
     100% {
-        box-shadow: 0px 0px 0px -60px rgba(110, 110, 110, .17), 
-                    0px 0px 0px -30px rgba(110, 110, 110, .17), 
-                    0px 0px 0px 0px rgba(110, 110, 110, .17); 
+        box-shadow: 0px 0px 0px -60px rgba(110, 110, 110, .17),
+            0px 0px 0px -30px rgba(110, 110, 110, .17),
+            0px 0px 0px 0px rgba(110, 110, 110, .17);
+    }
+}
+
+@media screen and (max-width: 1480px) {
+    .header {
+
+        &__owner_title {
+            display: none;
+        }
+
+        &__burger {
+            display: none;
+        }
     }
 }
 
@@ -785,13 +802,17 @@ footer {
     .rules {
         &__scrollTop {
             display: flex;
-            margin-left: auto;
+            // margin-left: auto;
             padding: 10px 15px;
             margin-top: 15px;
             border: none;
             background: #3b383c;
-            color: #e1af00;
+            color: #e1af01;
             border-radius: 5px;
+            position: sticky;
+            bottom: 15px;
+            left: 15px;
+            margin-bottom: 15px;
         }
     }
 
@@ -810,16 +831,6 @@ footer {
     .main {
         &__about {
             background-position: unset;
-        }
-    }
-
-    .header {
-        &__owner_title {
-            display: none;
-        }
-
-        &__burger {
-            display: none;
         }
     }
 
@@ -892,6 +903,16 @@ footer {
             right: 15px;
             width: 25px;
             height: 25px;
+        }
+    }
+
+    .form {
+        &__input {
+            width: 100%;
+        }
+
+        &__span {
+            left: 15px;
         }
     }
 
